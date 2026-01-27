@@ -1,15 +1,8 @@
 {
     "name": "topnews-redirect-worker",
     "version": "1.0.0",
-    "description": "Cloudflare Worker for Facebook redirect with KV caching",
-    "main": "worker.js",
+    "private": true,
     "scripts": {
-        "dev": "wrangler dev",
-        "deploy": "wrangler deploy",
-        "tail": "wrangler tail",
-        "kv:create": "wrangler kv:namespace create META_CACHE"
-    },
-    "devDependencies": {
-        "wrangler": "^3.0.0"
+        "deploy": "wrangler deploy"
     }
 }

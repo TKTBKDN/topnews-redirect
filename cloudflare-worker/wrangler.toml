@@ -1,23 +1,13 @@
 # Cloudflare Workers Configuration
-# Deploy via: Cloudflare Dashboard -> Workers -> Create -> Connect to Git
+# Deploy via: Cloudflare Dashboard -> Workers & Pages -> Create -> Connect to Git
 
 name = "topnews-redirect"
 main = "worker.js"
 compatibility_date = "2024-01-01"
 
-# Enable workers.dev subdomain for testing
+# Enable workers.dev subdomain
 workers_dev = true
 
-# KV Namespace for caching meta data
-# ⚠️ Tạo KV namespace trong Cloudflare Dashboard:
-# 1. Workers & Pages → KV → Create namespace → Tên: META_CACHE
-# 2. Workers → topnews-redirect → Settings → Variables → KV Namespace Bindings
-# 3. Variable name: META_CACHE → Select namespace
-[[kv_namespaces]]
-binding = "META_CACHE"
-id = "REPLACE_WITH_KV_ID_FROM_DASHBOARD"
-
-# Custom domain (thêm sau khi deploy ok)
-# routes = [
-#   { pattern = "your-domain.com/*", zone_name = "your-domain.com" }
-# ]
+# KV Namespace - Thêm sau khi deploy thành công
+# Vào Dashboard -> Workers -> topnews-redirect -> Settings -> Variables -> KV Namespace Bindings
+# Binding name: META_CACHE
