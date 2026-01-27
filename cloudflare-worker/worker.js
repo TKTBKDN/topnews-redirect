@@ -1,0 +1,217 @@
+/**
+ * Cloudflare Workers - Facebook Redirect Optimizer
+ * 
+ * Flow:
+ * - Non-Facebook users -> Instant 301 redirect (no API calls)
+ * - Facebook crawlers -> Serve cached meta tags from KV or fetch from API
+ * 
+ * Features:
+ * - KV caching to minimize API calls (saves costs)
+ * - 3-second API timeout with fallback to backup JSON
+ * - Cache meta data for 24 hours
+ * - Edge-level redirects (ultra fast)
+ */
+
+// ============= CONFIGURATION =============
+const CONFIG = {
+  // Domain to redirect non-Facebook users to
+  REDIRECT_DOMAIN: 'https://topnews.livextop.com',
+
+  // Primary API endpoint
+  API_URL: 'https://apisport.vbonews.com/News/news-detailbasic',
+
+  // Backup JSON CDN (R2 hoặc CDN khác)
+  BACKUP_URL: 'https://file.lifenews247.com/sportnews/backup',
+
+  // API timeout in milliseconds
+  API_TIMEOUT: 3000,
+
+  // Cache TTL in seconds (24 hours)
+  CACHE_TTL: 86400,
+};
+
+// ============= MAIN HANDLER =============
+export default {
+  async fetch(request, env) {
+    const url = new URL(request.url);
+    const userAgent = (request.headers.get('user-agent') || '').toLowerCase();
+
+    // ===== FAST PATH: Non-Facebook users get instant redirect =====
+    if (!isFacebookCrawler(userAgent)) {
+      return Response.redirect(
+        `${CONFIG.REDIRECT_DOMAIN}${url.pathname}${url.search}`,
+        301
+      );
+    }
+
+    // ===== FACEBOOK CRAWLER PATH: Serve meta tags =====
+    const pathname = url.pathname;
+
+    // Handle homepage
+    if (pathname === '/' || pathname === '') {
+      return createMetaResponse('Trang chủ', '');
+    }
+
+    // Extract slug and ID from path (format: /p-title-123)
+    const slug = pathname.slice(1); // Remove leading /
+    const id = extractId(slug);
+
+    if (!id) {
+      return createMetaResponse('Không tìm thấy', '');
+    }
+
+    // Try to get from KV cache first (fastest)
+    let metaData = null;
+
+    if (env.META_CACHE) {
+      try {
+        const cached = await env.META_CACHE.get(`meta:${id}`, 'json');
+        if (cached) {
+          return createMetaResponse(cached.name, cached.avatarLink);
+        }
+      } catch (e) {
+        console.log('KV cache miss or error');
+      }
+    }
+
+    // Not in cache, fetch from API
+    metaData = await fetchMetaData(id);
+
+    // Save to KV cache for next time
+    if (env.META_CACHE && metaData.name) {
+      try {
+        await env.META_CACHE.put(
+          `meta:${id}`,
+          JSON.stringify(metaData),
+          { expirationTtl: CONFIG.CACHE_TTL }
+        );
+      } catch (e) {
+        console.log('Failed to cache:', e);
+      }
+    }
+
+    return createMetaResponse(metaData.name, metaData.avatarLink);
+  }
+};
+
+// ============= HELPER FUNCTIONS =============
+
+/**
+ * Check if user agent is Facebook crawler
+ */
+function isFacebookCrawler(userAgent) {
+  return userAgent.includes('facebook') ||
+    userAgent.includes('facebookexternalhit') ||
+    userAgent.includes('facebot');
+}
+
+/**
+ * Extract ID from slug (format: p-title-text-123 -> 123)
+ */
+function extractId(slug) {
+  if (!slug) return null;
+  const lastDash = slug.lastIndexOf('-');
+  if (lastDash === -1) return slug;
+  const id = slug.slice(lastDash + 1);
+  // Validate ID is numeric
+  return /^\d+$/.test(id) ? id : null;
+}
+
+/**
+ * Fetch meta data from API with fallback to backup JSON
+ */
+async function fetchMetaData(id) {
+  // 1. Try primary API with timeout
+  try {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), CONFIG.API_TIMEOUT);
+
+    const response = await fetch(`${CONFIG.API_URL}?id=${id}`, {
+      signal: controller.signal,
+      headers: {
+        'Accept': 'application/json',
+      }
+    });
+    clearTimeout(timeoutId);
+
+    if (response.ok) {
+      const json = await response.json();
+      const data = json.data;
+
+      if (data?.name?.trim()) {
+        return {
+          name: data.name.trim(),
+          avatarLink: data.avatarLink || ''
+        };
+      }
+    }
+  } catch (e) {
+    console.log(`API failed for id ${id}:`, e.message);
+  }
+
+  // 2. Fallback to backup JSON from CDN
+  try {
+    const backupResponse = await fetch(`${CONFIG.BACKUP_URL}/${id}.json`);
+
+    if (backupResponse.ok) {
+      const backup = await backupResponse.json();
+
+      if (backup?.name?.trim()) {
+        return {
+          name: backup.name.trim(),
+          avatarLink: backup.avatarLink || ''
+        };
+      }
+    }
+  } catch (e) {
+    console.log(`Backup failed for id ${id}:`, e.message);
+  }
+
+  // 3. Both failed, return empty
+  return { name: '', avatarLink: '' };
+}
+
+/**
+ * Create HTML response with Open Graph meta tags
+ */
+function createMetaResponse(name, avatarLink) {
+  const safeName = escapeHtml(name);
+  const safeImage = escapeHtml(avatarLink);
+
+  const html = `<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>${safeName}</title>
+  <meta property="og:title" content="${safeName}" />
+  <meta property="og:description" content="${safeName}" />
+  <meta property="og:image" content="${safeImage}" />
+  <meta property="og:type" content="article" />
+  <meta property="fb:app_id" content="" />
+</head>
+<body></body>
+</html>`;
+
+  return new Response(html, {
+    status: 200,
+    headers: {
+      'Content-Type': 'text/html;charset=UTF-8',
+      'Cache-Control': 'public, max-age=86400, s-maxage=86400',
+      'X-Robots-Tag': 'noindex, nofollow',
+    }
+  });
+}
+
+/**
+ * Escape HTML special characters to prevent XSS
+ */
+function escapeHtml(str) {
+  if (!str) return '';
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}

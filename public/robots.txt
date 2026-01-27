@@ -1,0 +1,27 @@
+# Disallow most bots - this is a redirect site, no need for indexing
+User-agent: *
+Disallow: /
+
+# Allow Facebook crawler (needed for Open Graph metadata)
+User-agent: facebookexternalhit
+Allow: /
+
+# Allow other social media crawlers for metadata
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+# Prevent aggressive bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
