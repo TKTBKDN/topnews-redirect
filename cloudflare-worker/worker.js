@@ -137,7 +137,10 @@ async function fetchMetaData(id) {
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), CONFIG.API_TIMEOUT);
 
-    const response = await fetch(`${CONFIG.API_URL}?id=${id}`, {
+    const apiUrl = `${CONFIG.API_URL}?id=${id}`;
+    console.log(`[API] Fetching: ${apiUrl}`);
+
+    const response = await fetch(apiUrl, {
       signal: controller.signal,
       headers: {
         'Accept': 'application/json',
@@ -150,35 +153,49 @@ async function fetchMetaData(id) {
       const data = json.data;
 
       if (data?.name?.trim()) {
+        console.log(`[API SUCCESS] ID: ${id}, Name: ${data.name}`);
         return {
           name: data.name.trim(),
           avatarLink: data.avatarLink || ''
         };
+      } else {
+        console.log(`[API WARNING] ID: ${id} - No valid name in response`);
       }
+    } else {
+      console.log(`[API ERROR] ID: ${id} - HTTP ${response.status}`);
     }
   } catch (e) {
-    console.log(`API failed for id ${id}:`, e.message);
+    console.log(`[API FAILED] ID: ${id} - ${e.message}`);
   }
 
   // 2. Fallback to backup JSON from CDN
   try {
-    const backupResponse = await fetch(`${CONFIG.BACKUP_URL}/${id}.json`);
+    const backupUrl = `${CONFIG.BACKUP_URL}/${id}.json`;
+    console.log(`[BACKUP] Fetching: ${backupUrl}`);
+
+    const backupResponse = await fetch(backupUrl);
 
     if (backupResponse.ok) {
       const backup = await backupResponse.json();
 
       if (backup?.name?.trim()) {
+        console.log(`[BACKUP SUCCESS] ID: ${id}, Name: ${backup.name}`);
         return {
           name: backup.name.trim(),
           avatarLink: backup.avatarLink || ''
         };
+      } else {
+        console.log(`[BACKUP WARNING] ID: ${id} - No valid name in backup`);
       }
+    } else {
+      console.log(`[BACKUP ERROR] ID: ${id} - HTTP ${backupResponse.status}`);
     }
   } catch (e) {
-    console.log(`Backup failed for id ${id}:`, e.message);
+    console.log(`[BACKUP FAILED] ID: ${id} - ${e.message}`);
   }
 
   // 3. Both failed, return empty
+  console.log(`[FINAL] ID: ${id} - Both API and Backup failed, returning empty`);
   return { name: '', avatarLink: '' };
 }
 
