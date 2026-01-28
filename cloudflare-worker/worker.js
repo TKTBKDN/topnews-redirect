@@ -117,15 +117,15 @@ function isFacebookCrawler(userAgent) {
 }
 
 /**
- * Extract ID from slug (format: p-title-text-123 -> 123)
+ * Extract ID from slug (format: title-text-abc123 -> abc123)
  */
 function extractId(slug) {
   if (!slug) return null;
   const lastDash = slug.lastIndexOf('-');
   if (lastDash === -1) return slug;
   const id = slug.slice(lastDash + 1);
-  // Validate ID is numeric
-  return /^\d+$/.test(id) ? id : null;
+  // Validate ID is alphanumeric (chữ + số)
+  return /^[a-zA-Z0-9]+$/.test(id) ? id : null;
 }
 
 /**
