@@ -15,8 +15,8 @@
 // ============= CONFIGURATION =============
 const CONFIG = {
   // Domain to redirect non-Facebook users to
-  //REDIRECT_DOMAIN: 'https://topnewsus.feji.io',
-  REDIRECT_DOMAIN: 'https://vtus.cafex.biz',
+  REDIRECT_DOMAIN: 'https://topnewsus.feji.io',
+  //REDIRECT_DOMAIN: 'https://vtus.cafex.biz',
 
   // Primary API endpoint
   API_URL: 'https://apisport.vbonews.com/News/news-detailbasic',
