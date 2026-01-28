@@ -12,12 +12,20 @@
  * - Edge-level redirects (ultra fast)
  */
 
+// ============= DOMAIN MAPPING =============
+// Thêm domain vào đây: 'domain-đầu-vào': 'domain-đích'
+const DOMAIN_MAP = {
+  'topnews-redirect.takhanhthient3.workers.dev': 'https://topnewsus.feji.io',
+  // Thêm domain khác tại đây, ví dụ:
+  // 'domain-a.com': 'https://domain-a1.com',
+  // 'domain-b.com': 'https://domain-b1.com',
+};
+
+// Domain mặc định nếu không tìm thấy trong map
+const DEFAULT_REDIRECT = 'https://topnewsus.feji.io';
+
 // ============= CONFIGURATION =============
 const CONFIG = {
-  // Domain to redirect non-Facebook users to
-  REDIRECT_DOMAIN: 'https://topnewsus.feji.io',
-  //REDIRECT_DOMAIN: 'https://vtus.cafex.biz',
-
   // Primary API endpoint
   API_URL: 'https://apisport.vbonews.com/News/news-detailbasic',
 
@@ -39,8 +47,10 @@ export default {
 
     // ===== FAST PATH: Non-Facebook users get instant redirect =====
     if (!isFacebookCrawler(userAgent)) {
+      // Lấy domain đích từ DOMAIN_MAP dựa trên hostname đầu vào
+      const targetDomain = DOMAIN_MAP[url.hostname] || DEFAULT_REDIRECT;
       return Response.redirect(
-        `${CONFIG.REDIRECT_DOMAIN}${url.pathname}${url.search}`,
+        `${targetDomain}${url.pathname}${url.search}`,
         301
       );
     }
