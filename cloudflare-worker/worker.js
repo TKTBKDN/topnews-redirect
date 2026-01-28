@@ -86,7 +86,7 @@ export default {
     }
 
     // Not in cache, fetch from API
-    metaData = await fetchMetaData(id);
+    metaData = await fetchMetaData(id, userAgent);
 
     // Save to KV cache for next time
     if (env.META_CACHE && metaData.name) {
@@ -131,7 +131,9 @@ function extractId(slug) {
 /**
  * Fetch meta data from API with fallback to backup JSON
  */
-async function fetchMetaData(id) {
+async function fetchMetaData(id, userAgent = '') {
+  console.log(`[REQUEST] ID: ${id}, UserAgent: ${userAgent}`);
+
   // 1. Try primary API with timeout
   try {
     const controller = new AbortController();
