@@ -17,7 +17,7 @@
 const DOMAIN_MAP = {
   'topnews-redirect.takhanhthient3.workers.dev': 'https://topnewsus.feji.io',
   // Thêm domain khác tại đây, ví dụ:
-  // 'domain-a.com': 'https://domain-a1.com',
+  'tuneblast.us': 'https://anhus.livextop.com',
   // 'domain-b.com': 'https://domain-b1.com',
 };
 
