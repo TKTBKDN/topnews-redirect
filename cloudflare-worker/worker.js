@@ -76,7 +76,7 @@ const GROUP_5_DOMAINS = [
 ];
 
 // Nhóm 6: ahnus.daily24.blog
-const GROUP_6_TARGET = 'https://ahnus.daily24.blog';
+const GROUP_6_TARGET = 'https://anhus.daily24.blog';
 const GROUP_6_DOMAINS = [
   'hittracks.net',
   'tuneblast.us',
