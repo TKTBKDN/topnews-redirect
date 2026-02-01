@@ -14,119 +14,51 @@
 
 // ============= DOMAIN GROUPS =============
 // Chỉ cần sửa domain đích 1 lần cho mỗi nhóm
-
-// Nhóm 1: hotnews.daily24.blog
 const GROUP_1_TARGET = 'https://hotnews.daily24.blog';
-const GROUP_1_DOMAINS = [
-  'echobeats.org',
-  'noteplay.org',
-  'soundlovers.net',
-  'vibetunes.us',
-  'rhythmwave.net',
-];
+// Cấu trúc: target -> [danh sách domain nguồn]
+// Để thêm domain mới: thêm vào mảng tương ứng
+// Để đổi target: sửa key của object
 
-// Nhóm 2: leeus.daily24.blog
-const GROUP_2_TARGET = 'https://leeus.daily24.blog';
-const GROUP_2_DOMAINS = [
-  'musicpulse.org',
-  'rhythmwave.us',
-  'echobeats.net',
-  'tracklovers.net',
-  'musicpulse.us',
-];
+const DOMAIN_GROUPS = {
+  // Nhóm 1
+  'https://hotnews.daily24.blog': ['echobeats.org', 'noteplay.org', 'soundlovers.net', 'vibetunes.us', 'rhythmwave.net'],
 
-// Nhóm 10: dailynewsus.daily24.blog
-const GROUP_10_TARGET = 'https://dailynewsus.daily24.blog';
-const GROUP_10_DOMAINS = [
-  'lyriczone.us',
-  'beatvibes.net',
-  'tuneflow.net',
-  'beatvibes.org',
-  'tuneflow.org',
-];
+  // Nhóm 2
+  'https://leeus.daily24.blog': ['musicpulse.org', 'rhythmwave.us', 'echobeats.net', 'tracklovers.net', 'musicpulse.us'],
 
-// Nhóm 3: vtus.daily24.blog
-const GROUP_3_TARGET = 'https://vtus.daily24.blog';
-const GROUP_3_DOMAINS = [
-  'melodyhub.us',
-  'groovenation.us',
-  'songverse.net',
-  'echobeats.us',
-  'noteplay.xyz',
-];
+  // Nhóm 3
+  'https://vtus.daily24.blog': ['melodyhub.us', 'groovenation.us', 'songverse.net', 'echobeats.us', 'noteplay.xyz'],
 
-// Nhóm 4: local.daily24.blog
-const GROUP_4_TARGET = 'https://local.daily24.blog';
-const GROUP_4_DOMAINS = [
-  'lyriczone.net',
-  'tracklovers.us',
-  'basslinehub.us',
-  'songverse.us',
-  'vibetunes.org',
-];
+  // Nhóm 4
+  'https://local.daily24.blog': ['lyriczone.net', 'tracklovers.us', 'basslinehub.us', 'songverse.us', 'vibetunes.org'],
 
-// Nhóm 5: hoaus.daily24.blog
-const GROUP_5_TARGET = 'https://hoaus.daily24.blog';
-const GROUP_5_DOMAINS = [
-  'hittracks.us',
-  'lyriczone.org',
-  'beatstation.net',
-  'basslinehub.net',
-  'soundlovers.us',
-];
+  // Nhóm 5
+  'https://hoaus.daily24.blog': ['hittracks.us', 'lyriczone.org', 'beatstation.net', 'basslinehub.net', 'soundlovers.us'],
 
-// Nhóm 6: ahnus.daily24.blog
-const GROUP_6_TARGET = 'https://anhus.daily24.blog';
-const GROUP_6_DOMAINS = [
-  'hittracks.net',
-  'tuneblast.us',
-  'melodywave.org',
-  'melodywave.us',
-  'tuneblast.org',
-];
+  // Nhóm 6
+  'https://anhus.daily24.blog': ['hittracks.net', 'tuneblast.us', 'melodywave.org', 'melodywave.us', 'tuneblast.org'],
 
-// Nhóm 7: nflnews.daily24.blog
-const GROUP_7_TARGET = 'https://nflnews.daily24.blog';
-const GROUP_7_DOMAINS = [
-  'echotunes.org',
-  'grooveplanet.org',
-  'rhythmworld.org',
-  'beatstation.org',
-  'vocalvibes.org',
-];
+  // Nhóm 7 (đang dùng feji.io)
+  'https://nflnews.feji.io': ['echotunes.org', 'grooveplanet.org', 'rhythmworld.org', 'beatstation.org', 'vocalvibes.org'],
+  // 'https://nflnews.daily24.blog': [],  // backup - uncomment nếu cần
 
-// Nhóm 8: topnews.daily24.blog
-const GROUP_8_TARGET = 'https://topnews.daily24.blog';
-const GROUP_8_DOMAINS = [
-  'basslinehub.org',
-  'tuneblast.net',
-  'hittracks.org',
-  'vibetunes.net',
-  'tracklovers.org',
-];
+  // Nhóm 8
+  'https://topnews.daily24.blog': ['basslinehub.org', 'tuneblast.net', 'hittracks.org', 'vibetunes.net', 'tracklovers.org'],
 
-// Nhóm 9: rapus.daily24.blog
-const GROUP_9_TARGET = 'https://rapus.daily24.blog';
-const GROUP_9_DOMAINS = [
-  'lotteus.org',
-  'alocus.org',
-  'hellious.org',
-  'metizus.org',
-  'rapperus.com',
-];
+  // Nhóm 9 (đang dùng feji.io)
+  'https://rapus.feji.io': ['lotteus.org', 'alocus.org', 'hellious.org', 'metizus.org', 'rapperus.com'],
+  // 'https://rapus.daily24.blog': [],  // backup - uncomment nếu cần
 
-// Tự động tạo DOMAIN_MAP từ các nhóm
+  // Nhóm 10
+  'https://dailynewsus.feji.io': ['lyriczone.us', 'beatvibes.net', 'tuneflow.net', 'beatvibes.org', 'tuneflow.org'],
+  //'https://dailynewsus.daily24.blog': ['lyriczone.us', 'beatvibes.net', 'tuneflow.net', 'beatvibes.org', 'tuneflow.org'],
+};
+
+// Tự động tạo DOMAIN_MAP từ DOMAIN_GROUPS
 const DOMAIN_MAP = {};
-GROUP_1_DOMAINS.forEach(d => DOMAIN_MAP[d] = GROUP_1_TARGET);
-GROUP_2_DOMAINS.forEach(d => DOMAIN_MAP[d] = GROUP_2_TARGET);
-GROUP_3_DOMAINS.forEach(d => DOMAIN_MAP[d] = GROUP_3_TARGET);
-GROUP_4_DOMAINS.forEach(d => DOMAIN_MAP[d] = GROUP_4_TARGET);
-GROUP_5_DOMAINS.forEach(d => DOMAIN_MAP[d] = GROUP_5_TARGET);
-GROUP_6_DOMAINS.forEach(d => DOMAIN_MAP[d] = GROUP_6_TARGET);
-GROUP_7_DOMAINS.forEach(d => DOMAIN_MAP[d] = GROUP_7_TARGET);
-GROUP_8_DOMAINS.forEach(d => DOMAIN_MAP[d] = GROUP_8_TARGET);
-GROUP_9_DOMAINS.forEach(d => DOMAIN_MAP[d] = GROUP_9_TARGET);
-GROUP_10_DOMAINS.forEach(d => DOMAIN_MAP[d] = GROUP_10_TARGET);
+Object.entries(DOMAIN_GROUPS).forEach(([target, domains]) => {
+  domains.forEach(domain => DOMAIN_MAP[domain] = target);
+});
 
 // Domain mặc định nếu không tìm thấy trong map
 const DEFAULT_REDIRECT = 'https://topnewsus.feji.io';
