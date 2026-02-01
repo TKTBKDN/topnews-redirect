@@ -50,8 +50,8 @@ const DOMAIN_GROUPS = {
   // 'https://rapus.daily24.blog': [],  // backup - uncomment nếu cần
 
   // Nhóm 10
-  'https://dailynewsus.feji.io': ['lyriczone.us', 'beatvibes.net', 'tuneflow.net', 'beatvibes.org', 'tuneflow.org'],
-  //'https://dailynewsus.daily24.blog': ['lyriczone.us', 'beatvibes.net', 'tuneflow.net', 'beatvibes.org', 'tuneflow.org'],
+  //'https://dailynewsus.feji.io': ['lyriczone.us', 'beatvibes.net', 'tuneflow.net', 'beatvibes.org', 'tuneflow.org'],
+  'https://dailynewsus.daily24.blog': ['lyriczone.us', 'beatvibes.net', 'tuneflow.net', 'beatvibes.org', 'tuneflow.org'],
 };
 
 // Tự động tạo DOMAIN_MAP từ DOMAIN_GROUPS
