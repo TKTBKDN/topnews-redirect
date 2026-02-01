@@ -78,10 +78,22 @@ const CONFIG = {
   CACHE_TTL: 86400,
 };
 
+// ============= STATIC ASSETS =============
+// Danh sách các path static cần bỏ qua (không redirect, không xử lý)
+const STATIC_PATHS = ['/favicon.ico', '/robots.txt', '/sitemap.xml', '/ads.txt', '/app-ads.txt'];
+
 // ============= MAIN HANDLER =============
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
+    const pathname = url.pathname.toLowerCase();
+
+    // ===== STATIC ASSETS: Return empty response =====
+    if (STATIC_PATHS.includes(pathname)) {
+      // Trả về 204 No Content cho các file static không tồn tại
+      return new Response(null, { status: 204 });
+    }
+
     const userAgent = (request.headers.get('user-agent') || '').toLowerCase();
 
     // ===== FAST PATH: Non-Facebook users get instant redirect =====
@@ -95,7 +107,6 @@ export default {
     }
 
     // ===== FACEBOOK CRAWLER PATH: Serve meta tags =====
-    const pathname = url.pathname;
 
     // Handle homepage
     if (pathname === '/' || pathname === '') {
