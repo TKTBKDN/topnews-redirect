@@ -167,15 +167,19 @@ function isFacebookCrawler(userAgent) {
 }
 
 /**
- * Extract ID from slug (format: title-text-abc123 -> abc123)
+ * Extract ID from slug
+ * Supports: /abc-xyz-03036380f8cd or /03036380f8cd
+ * ID must be exactly 12 alphanumeric characters
  */
 function extractId(slug) {
   if (!slug) return null;
+
+  // Get the last part after dash, or the whole slug if no dash
   const lastDash = slug.lastIndexOf('-');
-  if (lastDash === -1) return slug;
-  const id = slug.slice(lastDash + 1);
-  // Validate ID is alphanumeric (chữ + số)
-  return /^[a-zA-Z0-9]+$/.test(id) ? id : null;
+  const id = lastDash === -1 ? slug : slug.slice(lastDash + 1);
+
+  // Validate ID is exactly 12 alphanumeric characters
+  return /^[a-zA-Z0-9]{12}$/.test(id) ? id : null;
 }
 
 /**
