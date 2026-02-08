@@ -21,7 +21,7 @@ const GROUP_1_TARGET = 'https://hotnews.daily24.blog';
 
 const DOMAIN_GROUPS = {
   // Nhóm 1
-  'https://hotnews.daily24.blog': ['echobeats.org', 'noteplay.org', 'soundlovers.net', 'vibetunes.us', 'rhythmwave.net'],
+  'https://hotnews.daily24.blog': ['echobeats.org', 'noteplay.org', 'soundlovers.net', 'hotvibetunes.com', 'rhythmwave.net'],
 
   // Nhóm 2
   'https://leeus.daily24.blog': ['musicpulse.org', 'rhythmwave.us', 'echobeats.net', 'tracklovers.net', 'hotnewsusvip.com'],
