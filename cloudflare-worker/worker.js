@@ -24,7 +24,7 @@ const DOMAIN_GROUPS = {
   'https://hotnews.daily24.blog': ['echobeats.org', 'noteplay.org', 'soundlovers.net', 'hotvibetunes.com', 'rhythmwave.net'],
 
   // Nhóm 2
-  'https://leeus.daily24.blog': ['musicpulse.org', 'rhythmwave.us', 'echobeats.net', 'tracklovers.net', 'hotnewsusvip.com'],
+  'https://leeus.daily24.blog': ['hotmusicpulse.com', 'rhythmwave.us', 'echobeats.net', 'tracklovers.net', 'hotnewsusvip.com'],
 
   // Nhóm 3
   'https://vtus.daily24.blog': ['melodyhubs.com', 'groovenations.com', 'songverse.net', 'echobeatz.com', 'noteplay.xyz'],
@@ -51,7 +51,7 @@ const DOMAIN_GROUPS = {
 
   // Nhóm 10
   //'https://dailynewsus.feji.io': ['lyriczone.us', 'beatvibes.net', 'tuneflow.net', 'beatvibes.org', 'tuneflow.org'],
-  'https://dailynewsus.daily24.blog': ['lyriczone.us', 'beatvibes.net', 'tuneflow.net', 'beatvibes.org', 'tuneflow.org'],
+  'https://dailynewsus.daily24.blog': ['lyriczonenews.com', 'beatvibes.net', 'tuneflow.net', 'beatvibes.org', 'tuneflow.org'],
 };
 
 // Tự động tạo DOMAIN_MAP từ DOMAIN_GROUPS
