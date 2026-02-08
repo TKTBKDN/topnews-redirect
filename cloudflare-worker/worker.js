@@ -24,19 +24,19 @@ const DOMAIN_GROUPS = {
   'https://hotnews.daily24.blog': ['echobeats.org', 'noteplay.org', 'soundlovers.net', 'hotvibetunes.com', 'rhythmwave.net'],
 
   // Nhóm 2
-  'https://leeus.daily24.blog': ['hotmusicpulse.com', 'rhythmwave.us', 'echobeats.net', 'tracklovers.net', 'hotnewsusvip.com'],
+  'https://leeus.daily24.blog': ['hotmusicpulse.com', 'rhythmwavenews.com', 'echobeats.net', 'tracklovers.net', 'hotnewsusvip.com'],
 
   // Nhóm 3
   'https://vtus.daily24.blog': ['melodyhubs.com', 'groovenations.com', 'songverse.net', 'echobeatz.com', 'noteplay.xyz'],
 
   // Nhóm 4
-  'https://local.daily24.blog': ['lyriczone.net', 'tracklovers.us', 'basslinehub.us', 'songverse.us', 'vibetunes.org'],
+  'https://local.daily24.blog': ['lyriczone.net', 'trackloversnews.com', 'basslinehubnews.com', 'songversenews.com', 'vibetunes.org'],
 
   // Nhóm 5
   'https://hoaus.daily24.blog': ['hoausnews.com', 'lyriczone.org', 'beatstation.net', 'basslinehub.net', 'soundloversnews.com'],
 
   // Nhóm 6
-  'https://anhus.daily24.blog': ['hittracks.net', 'tuneblast.us', 'melodywave.org', 'melodywave.us', 'tuneblast.org'],
+  'https://anhus.daily24.blog': ['hittracks.net', 'tuneblastnews.com', 'melodywave.org', 'melodywavenews.com', 'tuneblast.org'],
 
   // Nhóm 7 (đang dùng feji.io)
   'https://nflnews.feji.io': ['echotunes.org', 'grooveplanet.org', 'rhythmworld.org', 'beatstation.org', 'vocalvibes.org'],
