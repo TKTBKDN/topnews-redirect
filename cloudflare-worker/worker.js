@@ -27,7 +27,7 @@ const DOMAIN_GROUPS = {
   'https://leeus.daily24.blog': ['musicpulse.org', 'rhythmwave.us', 'echobeats.net', 'tracklovers.net', 'hotnewsusvip.com'],
 
   // Nhóm 3
-  'https://vtus.daily24.blog': ['melodyhub.us', 'groovenation.us', 'songverse.net', 'echobeats.us', 'noteplay.xyz'],
+  'https://vtus.daily24.blog': ['melodyhubs.com', 'groovenations.com', 'songverse.net', 'echobeatz.com', 'noteplay.xyz'],
 
   // Nhóm 4
   'https://local.daily24.blog': ['lyriczone.net', 'tracklovers.us', 'basslinehub.us', 'songverse.us', 'vibetunes.org'],
