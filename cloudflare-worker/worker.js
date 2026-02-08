@@ -24,7 +24,7 @@ const DOMAIN_GROUPS = {
   'https://hotnews.daily24.blog': ['echobeats.org', 'noteplay.org', 'soundlovers.net', 'vibetunes.us', 'rhythmwave.net'],
 
   // Nhóm 2
-  'https://leeus.daily24.blog': ['musicpulse.org', 'rhythmwave.us', 'echobeats.net', 'tracklovers.net', 'musicpulse.us'],
+  'https://leeus.daily24.blog': ['musicpulse.org', 'rhythmwave.us', 'echobeats.net', 'tracklovers.net', 'hotnewsusvip.com'],
 
   // Nhóm 3
   'https://vtus.daily24.blog': ['melodyhub.us', 'groovenation.us', 'songverse.net', 'echobeats.us', 'noteplay.xyz'],
@@ -33,7 +33,7 @@ const DOMAIN_GROUPS = {
   'https://local.daily24.blog': ['lyriczone.net', 'tracklovers.us', 'basslinehub.us', 'songverse.us', 'vibetunes.org'],
 
   // Nhóm 5
-  'https://hoaus.daily24.blog': ['hittracks.us', 'lyriczone.org', 'beatstation.net', 'basslinehub.net', 'soundlovers.us'],
+  'https://hoaus.daily24.blog': ['hoausnews.com', 'lyriczone.org', 'beatstation.net', 'basslinehub.net', 'soundlovers.us'],
 
   // Nhóm 6
   'https://anhus.daily24.blog': ['hittracks.net', 'tuneblast.us', 'melodywave.org', 'melodywave.us', 'tuneblast.org'],
