@@ -33,7 +33,7 @@ const DOMAIN_GROUPS = {
   'https://local.daily24.blog': ['lyriczone.net', 'tracklovers.us', 'basslinehub.us', 'songverse.us', 'vibetunes.org'],
 
   // Nhóm 5
-  'https://hoaus.daily24.blog': ['hoausnews.com', 'lyriczone.org', 'beatstation.net', 'basslinehub.net', 'soundlovers.us'],
+  'https://hoaus.daily24.blog': ['hoausnews.com', 'lyriczone.org', 'beatstation.net', 'basslinehub.net', 'soundloversnews.com'],
 
   // Nhóm 6
   'https://anhus.daily24.blog': ['hittracks.net', 'tuneblast.us', 'melodywave.org', 'melodywave.us', 'tuneblast.org'],
