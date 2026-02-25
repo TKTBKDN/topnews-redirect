@@ -39,14 +39,14 @@ const DOMAIN_GROUPS = {
   'https://anhus.daily24.blog': ['hittracks.net', 'tuneblastnews.com', 'melodywave.org', 'melodywavenews.com', 'tuneblast.org'],
 
   // Nhóm 7 (đang dùng feji.io)
-  'https://nflnews.feji.io': ['echotunes.org', 'grooveplanet.org', 'rhythmworld.org', 'beatstation.org', 'vocalvibes.org'],
+  'https://nflnews.daily24.blog': ['echotunes.org', 'grooveplanet.org', 'rhythmworld.org', 'beatstation.org', 'vocalvibes.org'],
   // 'https://nflnews.daily24.blog': [],  // backup - uncomment nếu cần
 
   // Nhóm 8
   'https://topnews.daily24.blog': ['basslinehub.org', 'tuneblast.net', 'hittracks.org', 'vibetunes.net', 'tracklovers.org'],
 
   // Nhóm 9 (đang dùng feji.io)
-  'https://rapus.feji.io': ['lotteus.org', 'alocus.org', 'hellious.org', 'metizus.org', 'rapperus.com'],
+  'https://rapus.daily24.blog': ['lotteus.org', 'alocus.org', 'hellious.org', 'metizus.org', 'rapperus.com'],
   // 'https://rapus.daily24.blog': [],  // backup - uncomment nếu cần
 
   // Nhóm 10
