@@ -36,7 +36,7 @@ const DOMAIN_GROUPS = {
   'https://hoaus.daily24.blog': ['hoausnews.com', 'lyriczone.org', 'beatstation.net', 'basslinehub.net', 'soundloversnews.com'],
 
   // Nhóm 6
-  'https://anhus.daily24.blog': ['hittracks.net', 'tuneblastnews.com', 'melodywave.org', 'melodywavenews.com', 'tuneblast.org'],
+  'https://anhus.daily24.blog': ['hoanewsus.com','lyriczones.com','beatstationnews.com','basslinehubus.com','soundloversus.com','hittracks.net', 'tuneblastnews.com', 'melodywave.org', 'melodywavenews.com', 'tuneblast.org'],
 
   // Nhóm 7 (đang dùng feji.io)
   'https://nflnews.daily24.blog': ['echotunes.org', 'grooveplanet.org', 'rhythmworld.org', 'beatstation.org', 'vocalvibes.org'],
