@@ -21,13 +21,15 @@ const GROUP_1_TARGET = 'https://hotnews.daily24.blog';
 
 const DOMAIN_GROUPS = {
   // Nhóm 1
-  'https://hotnews.daily24.blog': ['echobeats.org', 'noteplay.org', 'soundlovers.net', 'hotvibetunes.com', 'rhythmwave.net'],
+  'https://ai.daily24.blog': ['echobeats.org', 'noteplay.org', 'soundlovers.net', 'hotvibetunes.com', 'rhythmwave.net'],
+   //'https://hotnews.daily24.blog': ['echobeats.org', 'noteplay.org', 'soundlovers.net', 'hotvibetunes.com', 'rhythmwave.net'],
 
   // Nhóm 2
   'https://leeus.daily24.blog': ['hotmusicpulse.com', 'rhythmwavenews.com', 'echobeats.net', 'tracklovers.net', 'hotnewsusvip.com'],
 
   // Nhóm 3
-  'https://vtus.daily24.blog': ['melodyhubs.com', 'groovenations.com', 'songverse.net', 'echobeatz.com', 'noteplay.xyz'],
+  'https://my.daily24.blog': ['melodyhubs.com', 'groovenations.com', 'songverse.net', 'echobeatz.com', 'noteplay.xyz'],
+  //'https://vtus.daily24.blog': ['melodyhubs.com', 'groovenations.com', 'songverse.net', 'echobeatz.com', 'noteplay.xyz'],
 
   // Nhóm 4
   'https://local.daily24.blog': ['lyriczone.net', 'trackloversnews.com', 'basslinehubnews.com', 'songversenews.com', 'vibetunes.org'],
