@@ -21,7 +21,7 @@ const GROUP_1_TARGET = 'https://hotnews.daily24.blog';
 
 const DOMAIN_GROUPS = {
   // Nhóm 1
-  'https://ai.daily24.blog': ['echobeats.org', 'noteplay.org', 'soundlovers.net', 'hotvibetunes.com', 'rhythmwave.net'],
+  'https://ai.cafex.biz': ['echobeats.org', 'noteplay.org', 'soundlovers.net', 'hotvibetunes.com', 'rhythmwave.net'],
   //Nhóm thêm 4/4
   'https://celedaily.daily24.blog': ['celedailyus.com', 'celedailytop.com', 'celedailyhot.com', 'celedailyhotus.com', 'celedailypro.com'],
   'https://viral24us.daily24.blog': ['viraltopus.com', 'viralhotus.com', 'viraldailyus.com', 'virallivetop.com', 'livetopviral.com'],
