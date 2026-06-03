@@ -37,7 +37,7 @@ const DOMAIN_GROUPS = {
   'https://local.daily24.blog': ['lyriczone.net', 'trackloversnews.com', 'basslinehubnews.com', 'songversenews.com', 'vibetunes.org'],
 
   // Nhóm 5
-  'https://aius.daily24.blog': ['hoanewsus.com', 'lyriczones.com', 'beatstationnews.com', 'basslinehubus.com', 'soundloversus.com', 'hoausnews.com', 'lyriczone.org', 'beatstation.net', 'basslinehub.net', 'soundloversnews.com'],
+  'https://aius.cafex.biz': ['hoanewsus.com', 'lyriczones.com', 'beatstationnews.com', 'basslinehubus.com', 'soundloversus.com', 'hoausnews.com', 'lyriczone.org', 'beatstation.net', 'basslinehub.net', 'soundloversnews.com'],
 
   // Nhóm 6
   'https://anhus.daily24.blog': ['hittracks.net', 'tuneblastnews.com', 'melodywave.org', 'melodywavenews.com', 'tuneblast.org'],
