@@ -24,13 +24,13 @@ const DOMAIN_GROUPS = {
   'https://ai.cafex.biz': ['echobeats.org', 'noteplay.org', 'soundlovers.net', 'hotvibetunes.com', 'rhythmwave.net'],
   //Nhóm thêm 4/4
   'https://celedaily.daily24.blog': ['celedailyus.com', 'celedailytop.com', 'celedailyhot.com', 'celedailyhotus.com', 'celedailypro.com'],
-  'https://viral24us.daily24.blog': ['viraltopus.com', 'viralhotus.com', 'viraldailyus.com', 'virallivetop.com', 'livetopviral.com'],
+  'https://viralus.cafex.biz': ['viraltopus.com', 'viralhotus.com', 'viraldailyus.com', 'virallivetop.com', 'livetopviral.com'],
 
   // Nhóm 2
   'https://leeus.daily24.blog': ['hotmusicpulse.com', 'rhythmwavenews.com', 'echobeats.net', 'tracklovers.net', 'hotnewsusvip.com'],
 
   // Nhóm 3
-  'https://my.daily24.blog': ['melodyhubs.com', 'groovenations.com', 'songverse.net', 'echobeatz.com','vtusvip.com', 'noteplay.xyz'],
+  'https://myus.cafex.biz': ['melodyhubs.com', 'groovenations.com', 'songverse.net', 'echobeatz.com','vtusvip.com', 'noteplay.xyz'],
   //'https://vtus.daily24.blog': ['melodyhubs.com', 'groovenations.com', 'songverse.net', 'echobeatz.com', 'noteplay.xyz'],
 
   // Nhóm 4
