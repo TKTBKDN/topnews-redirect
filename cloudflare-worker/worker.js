@@ -23,7 +23,8 @@ const DOMAIN_GROUPS = {
   // Nhóm 1
   'https://ai.cafex.biz': ['echobeats.org', 'noteplay.org', 'soundlovers.net', 'hotvibetunes.com', 'rhythmwave.net'],
   //Nhóm thêm 4/4
-  'https://celedaily.cafex.biz': ['celedailyus.com', 'celedailytop.com', 'celedailyhot.com', 'celedailyhotus.com', 'celedailypro.com'],
+  //'https://celedaily.cafex.biz': ['celedailyus.com', 'celedailytop.com', 'celedailyhot.com', 'celedailyhotus.com', 'celedailypro.com'],
+  'https://celedaily.daily24.blog': ['celedailyus.com', 'celedailytop.com', 'celedailyhot.com', 'celedailyhotus.com', 'celedailypro.com'],
   'https://viralus.cafex.biz': ['viraltopus.com', 'viralhotus.com', 'viraldailyus.com', 'virallivetop.com', 'livetopviral.com'],
 
   // Nhóm 2
@@ -47,7 +48,8 @@ const DOMAIN_GROUPS = {
   // 'https://nflnews.daily24.blog': [],  // backup - uncomment nếu cần
 
   // Nhóm 8
-  'https://topnewsus.cafex.biz': ['basslinehub.org', 'tuneblast.net', 'hittracks.org', 'vibetunes.net', 'tracklovers.org'],
+  //'https://topnewsus.cafex.biz': ['basslinehub.org', 'tuneblast.net', 'hittracks.org', 'vibetunes.net', 'tracklovers.org'],
+  'https://topnews.daily24.blog': ['basslinehub.org', 'tuneblast.net', 'hittracks.org', 'vibetunes.net', 'tracklovers.org'],
 
   // Nhóm 9 (đang dùng feji.io)
   'https://rapus.cafex.biz': ['lotteus.org', 'alocus.org', 'hellious.org', 'metizus.org', 'rapperus.com'],
