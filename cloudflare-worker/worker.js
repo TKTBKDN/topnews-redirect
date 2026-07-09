@@ -21,19 +21,19 @@ const GROUP_1_TARGET = 'https://hotnews.daily24.blog';
 
 const DOMAIN_GROUPS = {
   // Nhóm 1
-  'https://ai.cafex.biz': ['echobeats.org', 'noteplay.org', 'soundlovers.net', 'hotvibetunes.com', 'rhythmwave.net'],
+  'https://ai.cafex.biz': ['echobeats.org', 'noteplay.org', 'soundlovers.net', 'hotvibetunes.com', 'rhythmwave.net',  'mynewsus.com','fastnewsus.com','newsloveus.com','newsloveus.com','myfastnewsus.com'],
   //'https://ai.daily24.blog': ['echobeats.org', 'noteplay.org', 'soundlovers.net', 'hotvibetunes.com', 'rhythmwave.net'],
   //Nhóm thêm 4/4
   'https://celedaily.cafex.biz': ['celedailyus.com', 'celedailytop.com', 'celedailyhot.com', 'celedailyhotus.com', 'celedailypro.com'],
   //'https://celedaily.daily24.blog': ['celedailyus.com', 'celedailytop.com', 'celedailyhot.com', 'celedailyhotus.com', 'celedailypro.com'],
-  'https://viralus.cafex.biz': ['viraltopus.com', 'viralhotus.com', 'viraldailyus.com', 'virallivetop.com', 'livetopviral.com'],
+  'https://viralus.cafex.biz': ['celebtopus.com','topusceleb.com','topcelebus.com','viralcelebus.com','viralcelebtopus.com','viraltopus.com', 'viralhotus.com', 'viraldailyus.com', 'virallivetop.com', 'livetopviral.com'],
 
   // Nhóm 2
   'https://leeus.cafex.biz': ['hotmusicpulse.com', 'rhythmwavenews.com', 'echobeats.net', 'tracklovers.net', 'hotnewsusvip.com'],
   //'https://leeus.daily24.blog': ['hotmusicpulse.com', 'rhythmwavenews.com', 'echobeats.net', 'tracklovers.net', 'hotnewsusvip.com'],
 
   // Nhóm 3
-  'https://myus.cafex.biz': ['melodyhubs.com', 'groovenations.com', 'songverse.net', 'echobeatz.com','vtusvip.com', 'noteplay.xyz'],
+  'https://myus.cafex.biz': ['livenewstopus.com','livenewstop.com','livenewstopviral.com','celebdailyus.com','celebdailytopus.com','melodyhubs.com', 'groovenations.com', 'songverse.net', 'echobeatz.com','vtusvip.com', 'noteplay.xyz'],
   //'https://myus.daily24.blog': ['melodyhubs.com', 'groovenations.com', 'songverse.net', 'echobeatz.com','vtusvip.com', 'noteplay.xyz'],
   //'https://vtus.daily24.blog': ['melodyhubs.com', 'groovenations.com', 'songverse.net', 'echobeatz.com', 'noteplay.xyz'],
 
@@ -42,7 +42,7 @@ const DOMAIN_GROUPS = {
   //'https://local.daily24.blog': ['lyriczone.net', 'trackloversnews.com', 'basslinehubnews.com', 'songversenews.com', 'vibetunes.org'],
 
   // Nhóm 5
-  'https://aius.cafex.biz': ['hoanewsus.com', 'lyriczones.com', 'beatstationnews.com', 'basslinehubus.com', 'soundloversus.com', 'hoausnews.com', 'lyriczone.org', 'beatstation.net', 'basslinehub.net', 'soundloversnews.com'],
+  'https://aius.cafex.biz': ['newslovekaka.com','tonewsus.com','topnewsceleb.com','celebnewsus.com','livenewsuslove.com','hoanewsus.com', 'lyriczones.com', 'beatstationnews.com', 'basslinehubus.com', 'soundloversus.com', 'hoausnews.com', 'lyriczone.org', 'beatstation.net', 'basslinehub.net', 'soundloversnews.com'],
   //'https://aius.daily24.blog': ['hoanewsus.com', 'lyriczones.com', 'beatstationnews.com', 'basslinehubus.com', 'soundloversus.com', 'hoausnews.com', 'lyriczone.org', 'beatstation.net', 'basslinehub.net', 'soundloversnews.com'],
 
   // Nhóm 6
