@@ -21,28 +21,28 @@ const GROUP_1_TARGET = 'https://hotnews.daily24.blog';
 
 const DOMAIN_GROUPS = {
   // Nhóm 1
-  'https://aivip.cafex.biz': ['echobeats.org', 'noteplay.org', 'soundlovers.net', 'hotvibetunes.com', 'rhythmwave.net',  'mynewsus.com','fastnewsus.com','newsloveus.com','newsloveus.com','myfastnewsus.com'],
+  'https://aivip.cfx.bz': ['echobeats.org', 'noteplay.org', 'soundlovers.net', 'hotvibetunes.com', 'rhythmwave.net',  'mynewsus.com','fastnewsus.com','newsloveus.com','newsloveus.com','myfastnewsus.com'],
   //'https://ai.daily24.blog': ['echobeats.org', 'noteplay.org', 'soundlovers.net', 'hotvibetunes.com', 'rhythmwave.net'],
   //Nhóm thêm 4/4
-  'https://caledailynewsus.cafex.biz': ['celedailyus.com', 'celedailytop.com', 'celedailyhot.com', 'celedailyhotus.com', 'celedailypro.com'],
+  'https://caledailynewsus.cfx.bz': ['celedailyus.com', 'celedailytop.com', 'celedailyhot.com', 'celedailyhotus.com', 'celedailypro.com'],
   //'https://celedaily.daily24.blog': ['celedailyus.com', 'celedailytop.com', 'celedailyhot.com', 'celedailyhotus.com', 'celedailypro.com'],
-  'https://viralus.cafex.biz': ['celebtopus.com','topusceleb.com','topcelebus.com','viralcelebus.com','viralcelebtopus.com','viraltopus.com', 'viralhotus.com', 'viraldailyus.com', 'virallivetop.com', 'livetopviral.com'],
+  'https://viralus.cfx.bz': ['celebtopus.com','topusceleb.com','topcelebus.com','viralcelebus.com','viralcelebtopus.com','viraltopus.com', 'viralhotus.com', 'viraldailyus.com', 'virallivetop.com', 'livetopviral.com'],
 
   // Nhóm 2
-  'https://leeus.cafex.biz': ['hotmusicpulse.com', 'rhythmwavenews.com', 'echobeats.net', 'tracklovers.net', 'hotnewsusvip.com'],
+  'https://leeus.cfx.bz': ['hotmusicpulse.com', 'rhythmwavenews.com', 'echobeats.net', 'tracklovers.net', 'hotnewsusvip.com'],
   //'https://leeus.daily24.blog': ['hotmusicpulse.com', 'rhythmwavenews.com', 'echobeats.net', 'tracklovers.net', 'hotnewsusvip.com'],
 
   // Nhóm 3
-  'https://myus.cafex.biz': ['livenewstopus.com','livenewstop.com','livenewstopviral.com','celebdailyus.com','celebdailytopus.com','melodyhubs.com', 'groovenations.com', 'songverse.net', 'echobeatz.com','vtusvip.com', 'noteplay.xyz'],
+  'https://myus.cfx.bz': ['livenewstopus.com','livenewstop.com','livenewstopviral.com','celebdailyus.com','celebdailytopus.com','melodyhubs.com', 'groovenations.com', 'songverse.net', 'echobeatz.com','vtusvip.com', 'noteplay.xyz'],
   //'https://myus.daily24.blog': ['melodyhubs.com', 'groovenations.com', 'songverse.net', 'echobeatz.com','vtusvip.com', 'noteplay.xyz'],
   //'https://vtus.daily24.blog': ['melodyhubs.com', 'groovenations.com', 'songverse.net', 'echobeatz.com', 'noteplay.xyz'],
 
   // Nhóm 4
-  'https://local.cafex.biz': ['lyriczone.net', 'trackloversnews.com', 'basslinehubnews.com', 'songversenews.com', 'vibetunes.org'],
+  'https://local.cfx.bz': ['lyriczone.net', 'trackloversnews.com', 'basslinehubnews.com', 'songversenews.com', 'vibetunes.org'],
   //'https://local.daily24.blog': ['lyriczone.net', 'trackloversnews.com', 'basslinehubnews.com', 'songversenews.com', 'vibetunes.org'],
 
   // Nhóm 5
-  'https://aius.cafex.biz': ['newslovekaka.com','tonewsus.com','topnewsceleb.com','celebnewsus.com','livenewsuslove.com','hoanewsus.com', 'lyriczones.com', 'beatstationnews.com', 'basslinehubus.com', 'soundloversus.com', 'hoausnews.com', 'lyriczone.org', 'beatstation.net', 'basslinehub.net', 'soundloversnews.com'],
+  'https://aius.cfx.bz': ['newslovekaka.com','tonewsus.com','topnewsceleb.com','celebnewsus.com','livenewsuslove.com','hoanewsus.com', 'lyriczones.com', 'beatstationnews.com', 'basslinehubus.com', 'soundloversus.com', 'hoausnews.com', 'lyriczone.org', 'beatstation.net', 'basslinehub.net', 'soundloversnews.com'],
   //'https://aius.daily24.blog': ['hoanewsus.com', 'lyriczones.com', 'beatstationnews.com', 'basslinehubus.com', 'soundloversus.com', 'hoausnews.com', 'lyriczone.org', 'beatstation.net', 'basslinehub.net', 'soundloversnews.com'],
 
   // Nhóm 6
@@ -54,7 +54,7 @@ const DOMAIN_GROUPS = {
   // 'https://nflnews.daily24.blog': [],  // backup - uncomment nếu cần
 
   // Nhóm 8
-  'https://topnewsusnews.cafex.biz': ['basslinehub.org', 'tuneblast.net', 'hittracks.org', 'vibetunes.net', 'tracklovers.org'],
+  'https://topnewsusnews.cfx.bz': ['basslinehub.org', 'tuneblast.net', 'hittracks.org', 'vibetunes.net', 'tracklovers.org'],
   //'https://topnews.daily24.blog': ['basslinehub.org', 'tuneblast.net', 'hittracks.org', 'vibetunes.net', 'tracklovers.org'],
 
   // Nhóm 9 (đang dùng feji.io)
