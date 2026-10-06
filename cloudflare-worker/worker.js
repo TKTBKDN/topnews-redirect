@@ -21,7 +21,7 @@ const GROUP_1_TARGET = 'https://hotnews.daily24.blog';
 
 const DOMAIN_GROUPS = {
   //Nhóm mới
-  'https://aiusnews.cfx.bz': ['hotaius.com','hotnewsaius.com','newshotai.com','hnewsaius.com','aihotnewsus.com'],
+  'https://aiusnews.cfx.bz': ['hotaius.com','hotnewsaius.com','newshotai.com','newsaius.com','aihotnewsus.com'],
   'https://vtusnews.cfx.bz': ['vthotnews.com','vtusnewshot.com','hotusnewsvt.com','newshotus.com','newsviralus.com'],
   // Nhóm 1
   'https://aivip.cfx.bz': ['aivipus.com','aiusvip.com','aiusvipus.com','hotaivip.com','hotnewsaivip.com','echobeats.org', 'noteplay.org', 'soundlovers.net', 'hotvibetunes.com', 'rhythmwave.net',  'mynewsus.com','fastnewsus.com','newsloveus.com','newsloveus.com','myfastnewsus.com'],
