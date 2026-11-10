@@ -44,6 +44,8 @@ const DOMAIN_GROUPS = {
   'https://local.cfx.bz': ['lyriczone.net', 'trackloversnews.com', 'basslinehubnews.com', 'songversenews.com', 'vibetunes.org'],
   //'https://local.daily24.blog': ['lyriczone.net', 'trackloversnews.com', 'basslinehubnews.com', 'songversenews.com', 'vibetunes.org'],
 
+  //Nhóm
+    'https://viralamazingnew.cfx.bz': ['newsvibeus.com','infopulseus.com','corewireus.com','briefsphereus.com','zenithfeedus.com'],
   // Nhóm 5
   'https://aius.cfx.bz': ['newslovekaka.com','tonewsus.com','topnewsceleb.com','celebnewsus.com','livenewsuslove.com','hoanewsus.com', 'lyriczones.com', 'beatstationnews.com', 'basslinehubus.com', 'soundloversus.com', 'hoausnews.com', 'lyriczone.org', 'beatstation.net', 'basslinehub.net', 'soundloversnews.com'],
   //'https://aius.daily24.blog': ['hoanewsus.com', 'lyriczones.com', 'beatstationnews.com', 'basslinehubus.com', 'soundloversus.com', 'hoausnews.com', 'lyriczone.org', 'beatstation.net', 'basslinehub.net', 'soundloversnews.com'],
