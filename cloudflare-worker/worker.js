@@ -24,8 +24,8 @@ const DOMAIN_GROUPS = {
   'https://aiusnews.cfx.bz': ['hotaius.com','hotnewsaius.com','newshotai.com','newsaius.com','aihotnewsus.com'],
   'https://vtusnews.cfx.bz': ['vthotnews.com','vtusnewshot.com','hotusnewsvt.com','newshotus.com','newsviralus.com'],
   // Nhóm 1
-  //'https://aivip.cfx.bz': ['aivipus.com','aiusvip.com','aiusvipus.com','hotaivip.com','hotnewsaivip.com','echobeats.org', 'noteplay.org', 'soundlovers.net', 'hotvibetunes.com', 'rhythmwave.net',  'mynewsus.com','fastnewsus.com','newsloveus.com','newsloveus.com','myfastnewsus.com'],
-  'https://aivip.cafex.biz': ['aivipus.com','aiusvip.com','aiusvipus.com','hotaivip.com','hotnewsaivip.com','echobeats.org', 'noteplay.org', 'soundlovers.net', 'hotvibetunes.com', 'rhythmwave.net',  'mynewsus.com','fastnewsus.com','newsloveus.com','newsloveus.com','myfastnewsus.com'],
+  'https://aivip.cfx.bz': ['aivipus.com','aiusvip.com','aiusvipus.com','hotaivip.com','hotnewsaivip.com','echobeats.org', 'noteplay.org', 'soundlovers.net', 'hotvibetunes.com', 'rhythmwave.net',  'mynewsus.com','fastnewsus.com','newsloveus.com','newsloveus.com','myfastnewsus.com'],
+  //'https://aivip.cafex.biz': ['aivipus.com','aiusvip.com','aiusvipus.com','hotaivip.com','hotnewsaivip.com','echobeats.org', 'noteplay.org', 'soundlovers.net', 'hotvibetunes.com', 'rhythmwave.net',  'mynewsus.com','fastnewsus.com','newsloveus.com','newsloveus.com','myfastnewsus.com'],
   //'https://ai.daily24.blog': ['echobeats.org', 'noteplay.org', 'soundlovers.net', 'hotvibetunes.com', 'rhythmwave.net'],
   //Nhóm thêm 4/4
   'https://caledailynewsus.cfx.bz': ['celedailyus.com', 'celedailytop.com', 'celedailyhot.com', 'celedailyhotus.com', 'celedailypro.com'],
@@ -38,8 +38,8 @@ const DOMAIN_GROUPS = {
   //'https://leeus.daily24.blog': ['hotmusicpulse.com', 'rhythmwavenews.com', 'echobeats.net', 'tracklovers.net', 'hotnewsusvip.com'],
 
   // Nhóm 3
-  //'https://myus.cfx.bz': ['livenewstopus.com','livenewstop.com','livenewstopviral.com','celebdailyus.com','celebdailytopus.com','melodyhubs.com', 'groovenations.com', 'songverse.net', 'echobeatz.com','vtusvip.com', 'noteplay.xyz'],
-  'https://myus.cafex.biz': ['livenewstopus.com','livenewstop.com','livenewstopviral.com','celebdailyus.com','celebdailytopus.com','melodyhubs.com', 'groovenations.com', 'songverse.net', 'echobeatz.com','vtusvip.com', 'noteplay.xyz'],
+  'https://myus.cfx.bz': ['livenewstopus.com','livenewstop.com','livenewstopviral.com','celebdailyus.com','celebdailytopus.com','melodyhubs.com', 'groovenations.com', 'songverse.net', 'echobeatz.com','vtusvip.com', 'noteplay.xyz'],
+  //'https://myus.cafex.biz': ['livenewstopus.com','livenewstop.com','livenewstopviral.com','celebdailyus.com','celebdailytopus.com','melodyhubs.com', 'groovenations.com', 'songverse.net', 'echobeatz.com','vtusvip.com', 'noteplay.xyz'],
   //'https://myus.daily24.blog': ['melodyhubs.com', 'groovenations.com', 'songverse.net', 'echobeatz.com','vtusvip.com', 'noteplay.xyz'],
   //'https://vtus.daily24.blog': ['melodyhubs.com', 'groovenations.com', 'songverse.net', 'echobeatz.com', 'noteplay.xyz'],
 
